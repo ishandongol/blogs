@@ -19,6 +19,7 @@ jobs:
         with:
           repository: ishandongol/blogs-template
           path: template
+          token: ${{ secrets.PAT }}
           persist-credentials: false
       - name: Copy Data and images to template and build 🏗️
         uses: actions/setup-node@v3
