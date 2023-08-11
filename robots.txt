@@ -1,9 +1,0 @@
-# *
-User-agent: *
-Allow: /
-
-# Host
-Host: https://blogs.ishandongol.com.np
-
-# Sitemaps
-Sitemap: https://blogs.ishandongol.com.np/sitemap.xml

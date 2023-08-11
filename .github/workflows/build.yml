@@ -1,0 +1,42 @@
+name: Build and Deploy Blog
+permissions:
+  contents: write
+on:
+  push:
+    branches:
+      - main
+jobs:
+  build-blogs:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Source Repository (blogs) (Public)
+        uses: actions/checkout@v3
+        with:
+          path: data
+          persist-credentials: false
+      - name: Checkout blogs-template repository (Private)
+        uses: actions/checkout@v3
+        with:
+          repository: ishandongol/blogs-template
+          path: template
+          persist-credentials: false
+      - name: Copy Data and images to template and build 🏗️
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18.2
+      - run: cp -r ./data/_posts ./template
+      - run: cp -r ./data/images ./template/public
+      - run: cd ./template && npm install
+      - run: cd ./template && npm run build
+      - run: cp -r ./template/out .
+      - run: touch ./out/.nojekyll
+      - run: cp ./data/CNAME ./out
+
+      - name: Deploy 🚀
+        uses: JamesIves/github-pages-deploy-action@3.6.2
+        with:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          BRANCH: gh-pages # The branch the action should deploy to.
+          FOLDER: out # The folder the action should deploy.
+          CLEAN: true # Automatically remove deleted files from the deploy branch
+
