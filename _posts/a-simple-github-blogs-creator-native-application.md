@@ -15,6 +15,6 @@ categories:
   color: red
   title: Pet Projects
 excerpt: A simple pet project that generates gray-matter .md files to plug into a jamstack web app
-published_at: 1692851674
+publishedAt: 1692852443
 ---
 A simple pet project that generates gray-matter .md files to plug into a jamstack web app. Made with Tauri. React as frontend and Rust as backend. Which is awesomeeee.
