@@ -1,10 +1,10 @@
 ---
 image:
-  src: ''
-  alt: null
-  attribution: null
+  src: 'christopher-gower-m_HRfLhgABo-unsplash.jpg'
+  alt: Application image
+  attribution: 'Photo by <a href="https://unsplash.com/@cgower?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Christopher Gower</a> on <a href="https://unsplash.com/photos/m_HRfLhgABo?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+  '
 author:
-  image: null
   slug: ishan-dongol
   name: Ishan Dongol
   bio: He is a professional web developer / software engineer, currently pursuing his Master's degree in Artificial Intelligence at Kathmandu University.  His area of expertise is React with Typescript. He also has sound knowledge of other languages/frameworks like Node.js, MongoDB, Python, Rust, Docker, Gitlab, and AWS.
